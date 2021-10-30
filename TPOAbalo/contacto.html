@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\estilosAST.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <title>FormularioAST</title>
+
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+
+        <h1 style="font-size:5.5vw;">AST</h1>
+        <p style="font-size: 1.5vw;"><b> Mantenimiento Eléctrico Integral</b> </p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Contenido -->
+    <div class="grid-container-f">
+        <div class="formulario">
+            <div class="jumbotron">
+                <h1>Contactanos</h1>
+                <h6>Los campos marcados con * son obligatorios</h6>
+            </div>
+            <div class="fcontacto">
+                <form action="" name='formulario' id='formulario' method="get">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" name="nombre" id="nombre" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="text" name="email" id="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="telefono">Teléfono</label>
+                            <input type="number" name="telefono" id="telefono" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" name="telefono" id="empresa" class="form-control">
+                        </div>
+                    </div>
+                    <label for="mensaje">Mensaje *</label>
+                    <textarea id="mensaje" cols="30" rows="10" class="form-control">
+                    </textarea>
+                    <input type="submit" id="btn" name="btn" value="Enviar">
+                </form>
+            </div>
+            <script>
+
+                (function () {
+
+                    var formulario = document.getElementsByName('formulario')[0],
+                        elementos = formulario.elements,
+                        boton = document.getElementById('btn');
+
+                    var validarNombre = function (e) {
+                        if (formulario.nombre.value == 0) {
+                            alert("Completar el campo Nombre");
+                            e.preventDefault();
+                        }
+                    };    
+                    var validarEmail = function (e) {
+                        if (formulario.email.value == 0) {
+                            alert("Completar el campo Correo electrónico");
+                            e.preventDefault();
+                            }
+                            
+                    };
+                    var validarMensaje = function (e) {
+                        if (formulario.mensaje.value == 0) {
+                            alert("Completar el campo Correo Mensaje");
+                            e.preventDefault();
+                            }
+                            
+                    };
+
+                    var validar = function (e) {
+                        validarNombre(e);
+                        validarEmail(e);
+                        validarMensaje(e);
+                        
+                    };
+
+                    formulario.addEventListener("submit", validar);
+                     
+                }())
+                
+            </script>
+
+        </div>
+
+        <div class="ubicación">
+            <h3>Donde estamos</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.85048866004!2d-58.539246885051305!3d-34.633218366566055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc8174afa4c61%3A0x3741bb5b331a1272!2sSolari%20519%2C%20Ciudadela%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1635388988231!5m2!1ses-419!2sar"
+                width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe><br>
+            <h3>Contactanos</h3>
+            <i class="fab fa-facebook-f"></i>
+            <p>www.facebook.com</p>
+            <i class="fab fa-twitter"></i>
+            <p>www.twittwer.com</p>
+            <i class="fab fa-instagram"></i>
+            <p>www.instagram.com</p>
+            <i class="fab fa-whatsapp"></i>
+            <p>+41115676893</p>
+            <i class="far fa-envelope"></i></i>
+            <p>ast.srl@gmail.com</p>
+
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <h4>Redes sociales</h4>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+        <br>
+        ><p>Derechos reservados 2021</p>
+    </div>
+    <script src="https://kit.fontawesome.com/a78512086f.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
